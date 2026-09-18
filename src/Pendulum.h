@@ -5,7 +5,7 @@ class Pendulum
 {
 public:
     Pendulum(double initialAngle, double initialAngularVelocity);
-    void update(double dt);
+    void update(double dt, double controlTorque);
     double getAngle() const;
     double getAngularVelocity() const;
 
