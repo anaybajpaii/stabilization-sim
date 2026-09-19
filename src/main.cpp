@@ -5,8 +5,21 @@
 
 int main()
 {
-    Pendulum myPendulum(0.1, 0.0);
-    Controller myController(5.0);
+    double initialAngle;
+    double length;
+    double gain;
+
+    std::cout << "Enter initial angle (radians): ";
+    std::cin >> initialAngle;
+
+    std::cout << "Enter pole length (meters): ";
+    std::cin >> length;
+
+    std::cout << "Enter controller gain (Kp): ";
+    std::cin >> gain;
+
+    Pendulum myPendulum(initialAngle, 0.0, length);
+    Controller myController(gain);
     DataLogger logger("data/controlled.csv");
 
     double dt = 0.01;
