@@ -37,6 +37,7 @@ int main()
     runScenario(initialAngle, length, 1.0, "data/underdamped.csv");
     runScenario(initialAngle, length, 5.0, "data/tuned.csv");
     runScenario(initialAngle, length, 20.0, "data/overdamped.csv");
+    runScenario(initialAngle, length, 0.0, "data/uncontrolled.csv");
 
     std::cout << "Done. Wrote data/underdamped.csv, data/tuned.csv, data/overdamped.csv" << std::endl;
 
